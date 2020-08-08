@@ -1,0 +1,26 @@
+version: '3.5'
+services:
+    db:
+        image: omin1994/pleasanter-postgresql:latest
+        restart: always
+        container_name: postgres
+        environment:
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=SetSaPWD
+            - POSTGRES_DB=Implem.Pleasanter
+        networks:
+            - default
+    web:
+        image: omin1994/docker-pleasanter:latest
+        container_name: pleasanter
+        ports:
+            - "8080:80"
+        tty: true
+        privileged: true
+        command: /sbin/init
+        networks:
+            - default
+networks:
+    default: 
+        name: pleasanterNetwork
+        
