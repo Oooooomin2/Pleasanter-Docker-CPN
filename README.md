@@ -1,6 +1,7 @@
 # Pleasanter-Docker-CPN
 PleasanterをCentOS7+Nginxコンテナ上で起動します。  
 DBコンテナにはPostgreSQLが入っています。
+動作確認はWindowsのみ行っています。
 
 # 利用方法
 1.以下のコマンドで当リポジトリをクローンします。  
